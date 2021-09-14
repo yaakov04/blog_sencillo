@@ -1,22 +1,7 @@
 <?php get_header(); ?>
 <main>
-	<?php 
-	if (have_posts()){
-		while (have_posts()){
-			the_post();?>
-			
-			<header>
-				<h1><?php the_title(); ?></h1>
-			</header>
-			
-			<div>
-				<?php the_content(); ?>
-			</div>
-			
-		<?php }
-	}
-	?>
-	<div>
+	
+	<div class="contenedor">
 		<h2>Articulos</h2>
 		<div>
 			<?php

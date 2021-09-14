@@ -7,3 +7,32 @@
     <?php wp_head() ?>
 </head>
 <body>
+	<?php 
+	if ($_SERVER['REQUEST_URI']==='/'){
+		if (have_posts()){
+			while (have_posts()){
+				the_post();?>
+				
+				<header class="encabezado" style="background-image: linear-gradient( rgba(41 41 41 / 70%), rgba(41 41 41 / 70%)), url(<?php echo get_the_post_thumbnail_url(); ?>);">
+					<h1><?php the_title(); ?></h1>
+				
+					<div>
+						<?php the_content(); ?>
+					</div>
+				</header>
+				
+			<?php }
+		}
+	}else{
+		if (have_posts()){
+			while (have_posts()){
+				the_post();?>
+				
+				<header class="encabezado" style="background-image: linear-gradient( rgba(41 41 41 / 70%), rgba(41 41 41 / 70%)), url(<?php echo get_the_post_thumbnail_url(); ?>);">
+					<h1><?php the_title(); ?></h1>
+				</header>
+				
+			<?php }
+		}
+	}
+	?>

@@ -7,3 +7,37 @@ Author URI: http://github.com/yaakov04
 License: GNU General Public Licence v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+	font-family: 'Urbanist', sans-serif;
+	font-weight: 300;
+	font-size:1.9rem;
+}
+
+img{
+	width:100%;
+	height:100%;
+}
+.contenedor{
+	max-width:97rem;
+	margin:0 auto;
+}
+.encabezado{
+	background-position: 50% 60%;
+    background-size: cover;
+    text-align: center;
+    padding: 4rem;
+    color: white;
+    height:30rem;
+}
