@@ -16,7 +16,7 @@
 				<header class="encabezado" style="background-image: linear-gradient( rgba(41 41 41 / 70%), rgba(41 41 41 / 70%)), url(<?php echo get_the_post_thumbnail_url(); ?>);">
 					<h1><?php the_title(); ?></h1>
 				
-					<div>
+					<div class="encabezado__descripcion">
 						<?php the_content(); ?>
 					</div>
 				</header>
@@ -28,7 +28,8 @@
 			while (have_posts()){
 				the_post();?>
 				
-				<header class="encabezado" style="background-image: linear-gradient( rgba(41 41 41 / 70%), rgba(41 41 41 / 70%)), url(<?php echo get_the_post_thumbnail_url(); ?>);">
+				<header class="encabezado encabezado--page" style="background-image: linear-gradient( rgba(41 41 41 / 70%), rgba(41 41 41 / 70%)), url(<?php echo get_the_post_thumbnail_url(); ?>);">
+					<span><a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a></span>
 					<h1><?php the_title(); ?></h1>
 				</header>
 				

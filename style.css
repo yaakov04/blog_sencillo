@@ -23,6 +23,17 @@ body{
 	font-family: 'Urbanist', sans-serif;
 	font-weight: 300;
 	font-size:1.9rem;
+	background-color:rgba(41 41 41);
+    color: white;
+}
+
+a{
+	text-decoration:none;
+	color: white;
+}
+
+figure{
+	margin:0;
 }
 
 img{
@@ -36,8 +47,67 @@ img{
 .encabezado{
 	background-position: 50% 60%;
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     padding: 4rem;
-    color: white;
-    height:30rem;
+    min-height:30rem;
+    max-height:100vh;
+}
+
+@media(min-width:800px) {
+		.encabezado--page{
+		background-size: cover;
+	}
+}
+
+.encabezado__descripcion p{
+	font-size:1.6rem;
+}
+
+@media(min-width:800px) {
+		.encabezado__descripcion p{
+			font-size:1.9rem;
+		}
+}
+
+.contenido--post{
+	padding:0 1rem;
+}
+
+.contenido__encabezado{
+	text-align:center;
+}
+
+.entradas{
+	display:flex;
+	flex-direction:column;
+	margin:0 .5rem;
+}
+
+@media(min-width:800px) {
+	.entradas{
+		flex-direction:row;
+		flex-wrap:wrap;
+	}
+}
+
+.entrada{
+	margin:1rem .5rem;
+	background-color:#4F4F4F;
+	border-radius:.7rem;
+	overflow:hidden;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media(min-width:800px) {
+	.entrada{
+		flex:0 0 calc(33.3% - 1rem);
+	}
+}
+
+.entrada__titular,.entrada__extracto{
+	padding:0 .8rem;
+}
+.entrada__titular a{
+	display:block;
+	text-align:center;
 }
